@@ -1,25 +1,20 @@
 import random
 import requests
 import json
+import pytumblr
 from datetime import datetime
 
-parameters = {
-    "lat": 40.71,
-    "lon": -74.0,
-}
+
 def connectToAPI():
-     response = requests.get("http://api.open-notify.org/iss-pass.json", params=parameters)
-     pass_times = response.json()['response']
-     printinfo(pass_times)
+   client = pytumblr.TumblrRestClient('04jDlKiLcnVV6hYsLtPiBz198r8Y4Uc8HPGQxhIe9GXfW1gC8i')
+   callAPI(client)
+   
+ 
+   
 
-def printinfo(obj):
-  #  text = json.dumps(obj, sort_keys=True, indent=4)
-
-    risetimes = []
-    for rt in obj:
-     time = datetime.fromtimestamp(rt['risetime'])
-     risetimes.append(time)
-     print(time)
+def callAPI(obj):
+   print("HERE")
+   print(obj.blog_info('sydthecoderkid.tumblr.com'))
 
 
-connectToAPI()
+    

@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../PythonTests"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../Library/Python/2.7/bin"
+		},
+		{
+			"path": "../.local/share/virtualenvs/RWBYCountdown-ctVONEG2"
+		}
+	],
+	"settings": {}
+}
